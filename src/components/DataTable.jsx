@@ -29,7 +29,7 @@ const DataTable = ({
     state: {
       grouping,
       columnVisibility,
-      sorting: sortingCriteria,
+      sorting: sortingCriteria
     },
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),

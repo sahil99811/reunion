@@ -9,11 +9,13 @@ import SortingOptions from "../components/SortingOptions";
 import GroupingOptions from "../components/GroupingOptions";
 import FilterOptions from "../components/FilterOptions";
 import DataTable from "../components/DataTable";
-
+import {data} from '../data/sample-data'
 export default function HomePage() {
   const [isPopupOpen, setPopupOpen] = useState(false);
   const [popupContent, setPopupContent] = useState (null);
   const [sortingCriteria, setSortingCriteria] = useState([]);
+  const [filterData,setFilterData]=useState([]);
+  const originalData=data;
   const handleSort = (sortingCriteria) => {
     setSortingCriteria(sortingCriteria);
   };

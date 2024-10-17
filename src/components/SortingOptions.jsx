@@ -3,20 +3,22 @@ import React, { useState } from "react";
 const SortingOptions = ({ onSort }) => {
   const [sortOptions, setSortOptions] = useState({});
 
-  const handleSortOrderChange = (option, order) => {
-    setSortOptions((prev) => ({
-      ...prev,
-      [option]: order,
-    }));
-  };
+   const handleSortOrderChange = (option, order) => {
+     setSortOptions((prev) => ({
+       ...prev,
+       [option]: order,
+     }));
+   };
 
-  const applySorting = () => {
-    const sortingCriteria = Object.entries(sortOptions).map(([key, value]) => ({
-      key,
-      order: value,
-    }));
-    onSort(sortingCriteria);
-  };
+   const applySorting = () => {
+     const sortingCriteria = Object.entries(sortOptions).map(
+       ([key, value]) => ({
+         key,
+         order: value,
+       })
+     );
+     onSort(sortingCriteria);
+   };
 
   return (
     <div className="flex flex-col p-4 bg-white rounded shadow-md max-w-sm mx-auto space-y-4">
